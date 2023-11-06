@@ -1,0 +1,620 @@
+<?
+include("include/head.php");
+?>
+
+<!--Title Header s-->
+<header
+    class="d-flex bg-white sticky-header align-content-center flex-wrap align-items-center justify-content-between  ">
+    <nav class="navbar">
+        <div class="container-fluid">
+            <button type="button" class="btn btn-md" onclick="window.history.back()"><span
+                    class="material-symbols-outlined">chevron_left</span>
+            </button>
+            <div class="header_title">상세 내역</div>
+        </div>
+    </nav>
+</header>
+<!--Title Header e-->
+<!--content s-->
+<div class="container">
+
+    <!--top-->
+    <div>
+        <div class="px-4 py-3 bg-primary-lighter">
+            <div class="text-success subtitle2">
+                견적완료
+            </div>
+            <div class="caption1 fw-bold mt-2">
+                상담을 통해 <span class="text-primary-dark">장례식장 견적이 도착</span>했어요.<br>
+                장례가 발생시, 출동요청을 눌러주세요.
+            </div>
+        </div>
+    </div>
+
+    <div class="pt-4 px-4">
+        <!--B type-->
+        <div class="card text-center d-flex flex-column gap-3 align-items-start cl_info border rounded-3 px-3 py-3">
+            <div class="order_list">
+                <div class="card ">
+                    <div class="position-relative w-30">
+                        <img src="https://www.jeju-jungangh.com/kor/_wpcomm/HomeType/basic/image/content/funeral_hall01.jpg"
+                            class="card-img-top" alt="장례식장">
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-content-center">
+                            <p class="card-text">제주 제주시</p>
+                        </div>
+                        <div class="d-flex flex-column text-start my-2">
+                            <h5 class="card-title cl_dark ">그랜드부민장례식장</h5>
+                            <div class="caption1 text-dark mt-2"><span>50명내외</span><span> / </span><span>고급형</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/B type-->
+    </div>
+
+    <div id="column">
+        <div class="stepper_wrapper">
+            <div class="stepper_item completed">
+                <div class="d-flex gap-1">
+                <div class="step_counter"><span class="material-symbols-outlined">done</span></div>
+                <div class="step_name">상담신청</div></div>
+                <div class="cl_info caption1">{rq_create_date}</div>
+            </div>
+            <div class="stepper_item active">
+                <div class="d-flex gap-1">
+                <div class="step_counter">2</div>
+                <div class="step_name">견적완료</div></div>
+                <div class="cl_info caption1">{estimate_create_date}</div>
+            </div>
+            <div class="stepper_item">
+                <div class="d-flex gap-1">
+                <div class="step_counter">3</div>
+                <div class="step_name">출동요청</div></div>
+            </div>
+            <div class="stepper_item">
+                <div class="d-flex gap-1">
+                <div class="step_counter">4</div>
+                <div class="step_name">결제진행</div></div>
+            </div>
+
+        </div> 
+    </div>
+
+    <div class="d-flex gap-3 px-4 pb-4 flex-column">
+        <button type="button" class="btn btn-dark btn-lg flex-1 rounded-2" onclick="location.href='#'"
+            id="liveToastBtn"><span class="material-symbols-outlined me-2">
+                call
+            </span> 24시간 전화상담</button>
+        <button type="button" class="btn btn-lg flex-1 btn-primary btn-right-arrow "
+            onclick="location.href='#'" id="liveToastBtn">
+            출동 요청</button> 
+    </div>
+    <!--/top-->
+    <hr>
+    <!--견적금액-->
+    <div>
+        <div class="d-flex justify-content-between align-items-center px-4 py-4 bg-pink">
+            <div class="subtitle1 text-danger">최종 견적 금액</div>
+            <div class="fw-bold"><span>11,000,000</span>원</div>
+        </div>
+    <div class="px-4 pt-4 pb-4">
+        <div class="subtitle2 mb-3">상담 요약</div>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">염습진행 x - 염습지도사, 염습과정 없음 . </textarea>
+
+    </div>
+</div>
+    <!--/견적금액-->
+
+    <!--Toast s-->
+    <div class="toast toast-bottom toast_animation show align-items-center bg-primary border-0" role="alert"
+        aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+            <div class="toast-body">
+                <div class="toast-message">
+                    <div class="text-dark">장례 발생 시, 출동요청하기를 눌러주세요.</div>
+                </div>
+            </div>
+            <button type="button" class="btn-close btn-close-dark me-2 m-auto" data-bs-dismiss="toast"
+                aria-label="Close"></button>
+        </div>
+    </div>
+    <!--Toast e-->
+
+    <hr>
+    <!--견적서-->
+
+    <section>
+        <!--비용안내 s-->
+        <div>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item border-0" style="cursor:default">
+                    <h2 class="accordion-header py-0" id="headingOne">
+                        <button
+                            class="accordion-button collapsed subtitle2 justify-content-between w-100 btn-xlg  align-items-center px-4"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
+                            aria-controls="collapseOne">
+                            장례견적서
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body px-0 py-0">
+
+                            <!--비용 wrap-->
+                            <div id="expense">
+                                <div class="table-responsive rounded-2 border mt-0 mx-4">
+                                    <table class="table" id="round_table">
+                                        <thead class="table-light">
+                                            <th class="round-lt text-center w-50">조문객 50명</th>
+                                            <th class="round-rt text-center w-50">고급형</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td colspan="2" class="cl_dark border-0"><span
+                                                        class="fw-bold">757</span>
+                                                    만원</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!--비용-->
+                                <div id="expense_detail" class="mt-4">
+                                    <div class="table-responsive rounded-2 border mt-3 mx-4">
+                                        <table class="table" id="round_table">
+                                            <colgroup>
+                                                <col width="50%">
+                                                <col width="50%">
+                                            </colgroup>
+                                            <thead class="table-light">
+                                                <th class="round-lt text-center">구분</th>
+                                                <th class="round-rt text-center">금액</th>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="">시설</td>
+                                                    <td class=""><span class="">728,000</span>
+                                                        원</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2" class="bg-light">빈소, 안치실</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="">고인용품</td>
+                                                    <td class=""><span class="">3,550,000</span>
+                                                        원</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2" class="bg-light">염습, 수시, 관, 수의, 입관용품</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="">인력서비스</td>
+                                                    <td class=""><span class="">300,000</span>
+                                                        원</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2" class="bg-light">장례지도사, 염습지도사, 장례도우미</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="">빈소용품</td>
+                                                    <td class=""><span class="">1,450,000</span>
+                                                        원</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2" class="bg-light">상복(4인), 영정사진, 일반제단, 종합빈소용품</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="">음식 비용</td>
+                                                    <td class=""><span class="">700,000</span>
+                                                        원</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2" class="bg-light">1인 식사비 14,000원 기준</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="">차량서비스</td>
+                                                    <td class=""><span class="">850,000</span>
+                                                        원</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2" class="bg-light border-bottom-0">운구차량 1대(앰뷸런스), 발인차량
+                                                        각 1대(리무진,45인승 버스)</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="pt-40">
+                                        <hr>
+                                    </div>
+                                    <!--세부내역 s-->
+                                    <div class="accordion" id="detailinfo">
+                                        <div class="accordion-item border-0" style="cursor:default">
+                                            <h2 class="accordion-header py-0" id="sub_headingOne">
+                                                <button
+                                                    class="accordion-button subtitle2 justify-content-between w-100 btn-xlg border-bottom align-items-center px-4"
+                                                    type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#sub_collapseOne" aria-expanded="true"
+                                                    aria-controls="sub_collapseOne">
+                                                    세부내역 보기
+                                                </button>
+                                            </h2>
+                                            <div id="sub_collapseOne" class="accordion-collapse collapse show"
+                                                aria-labelledby="sub_headingOne" data-bs-parent="#detailinfo">
+                                                <div class="accordion-body px-4">
+                                                    <!--시설비용 s-->
+                                                    <div>
+                                                        <div class="subtitle2 cl_info mt-2">시설
+                                                            비용</div>
+
+                                                        <div class="table-responsive rounded-2 border mt-3">
+                                                            <table class="table" id="round_table">
+                                                                <colgroup>
+                                                                    <col width="50%">
+                                                                    <col width="50%">
+                                                                </colgroup>
+                                                                <thead class="table-light">
+                                                                    <th class="round-lt text-center">
+                                                                        구분</th>
+                                                                    <th class="round-rt text-center">
+                                                                        금액</th>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="">7호실 (48석)
+                                                                        </td>
+                                                                        <td class=""><span class="">528,000</span>
+                                                                            원<span class="ms-2">~</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2" class="bg-light">시간당
+                                                                            8,500원</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="">41 평</td>
+                                                                        <td class=""><span class="">500,000</span>
+                                                                            원</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2" class="bg-light">6호실
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="">45 평</td>
+                                                                        <td class=""><span class="">500,000</span>
+                                                                            원</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2" class="bg-light">5호실
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="">52 평</td>
+                                                                        <td class=""><span class="">600,000</span>
+                                                                            원</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2" class="bg-light">2호실
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="">100 평</td>
+                                                                        <td class=""><span class="">1,000,000</span>
+                                                                            원</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2"
+                                                                            class="bg-light border-bottom-0">
+                                                                            1호실</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="">1구/시간당
+                                                                            2500원</td>
+                                                                        <td class=""><span class="">320,000</span>
+                                                                            원<span class="ms-2">~</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2"
+                                                                            class="bg-light border-bottom-0">
+                                                                            안치실</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+
+
+
+                                                    </div>
+                                                    <!--시설비용 e-->
+                                                    <!--고인 용품 비용 s-->
+                                                    <div>
+                                                        <div class="subtitle2 cl_info mt-40">고인 용품 비용</div>
+
+                                                        <div class="table-responsive rounded-2 border mt-3">
+                                                            <table class="table" id="round_table">
+                                                                <colgroup>
+                                                                    <col width="50%">
+                                                                    <col width="50%">
+                                                                </colgroup>
+                                                                <thead class="table-light">
+                                                                    <th class="round-lt text-center">
+                                                                        구분</th>
+                                                                    <th class="round-rt text-center">
+                                                                        금액</th>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="">염습
+                                                                        </td>
+                                                                        <td class=""><span class="">300,000</span>
+                                                                            원<span class="ms-2">~</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2" class="bg-light">염습, 재료비 등</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="">수시</td>
+                                                                        <td class=""><span class="">150,000</span>
+                                                                            원<span class="ms-2">~</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2" class="bg-light">수시 진행
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="">관</td>
+                                                                        <td class=""><span class="">600,000</span>
+                                                                            원<span class="ms-2">~</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2" class="bg-light">106호관 오동나무
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="">수의</td>
+                                                                        <td class=""><span class="">400,000</span>
+                                                                            원<span class="ms-2">~</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2" class="bg-light">수의 인견 1호
+                                                                            (탁나무/중국/함창/수작업(제주))
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="">입관용품</td>
+                                                                        <td class=""><span class="">N</span>
+                                                                            원<span class="ms-2">~</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2"
+                                                                            class="bg-light border-bottom-0">
+                                                                            조정 필요</td>
+                                                                    </tr>
+
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+
+
+
+                                                    </div>
+                                                    <!--고인 용품 비용 e-->
+                                                    <!--인력 서비스 비용 s-->
+                                                    <div>
+                                                        <div class="subtitle2 cl_info mt-40">인력 서비스 비용</div>
+                                                        <div class="table-responsive rounded-2 border mt-3">
+                                                            <table class="table" id="round_table">
+                                                                <colgroup>
+                                                                    <col width="50%">
+                                                                    <col width="50%">
+                                                                </colgroup>
+                                                                <thead class="table-light">
+                                                                    <th class="round-lt text-center">
+                                                                        구분</th>
+                                                                    <th class="round-rt text-center">
+                                                                        금액</th>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="">장례지도사
+                                                                        </td>
+                                                                        <td class=""><span class="">600,000</span>
+                                                                            원<span class="ms-2">~</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2" class="bg-light">48시간 기준</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="">염습지도사</td>
+                                                                        <td class=""><span class="">400,000</span>
+                                                                            원<span class="ms-2">~</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2" class="bg-light">염습 진행, 재료비 포함
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="">장례도우미</td>
+                                                                        <td class=""><span class="">200,000</span>
+                                                                            원<span class="ms-2">~</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2"
+                                                                            class="bg-light border-bottom-0">48시간 기준
+                                                                            (100인당
+                                                                            1인 필수)
+                                                                        </td>
+                                                                    </tr>
+
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <!--인력 서비스 비용 e-->
+                                                    <!--빈소 용품 비용 s-->
+                                                    <div>
+                                                        <div class="subtitle2 cl_info mt-40">빈소 용품 비용</div>
+                                                        <div class="table-responsive rounded-2 border mt-3">
+                                                            <table class="table" id="round_table">
+                                                                <colgroup>
+                                                                    <col width="50%">
+                                                                    <col width="50%">
+                                                                </colgroup>
+                                                                <thead class="table-light">
+                                                                    <th class="round-lt text-center">
+                                                                        구분</th>
+                                                                    <th class="round-rt text-center">
+                                                                        금액</th>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="">상복(4인)
+                                                                        </td>
+                                                                        <td class=""><span class="">300,000</span>
+                                                                            원<span class="ms-2">~</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2" class="bg-light">염습, 재료비 등</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="">영정사진</td>
+                                                                        <td class=""><span class="">150,000</span>
+                                                                            원<span class="ms-2">~</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2" class="bg-light">영정사진 포토샵 편집, 액자
+                                                                            등
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="">일반제단</td>
+                                                                        <td class=""><span class="">300,000</span>
+                                                                            원<span class="ms-2">~</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2" class="bg-light">2단 국화 제단
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="">종합빈소용품</td>
+                                                                        <td class=""><span class="">50,000</span>
+                                                                            원<span class="ms-2">~</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2"
+                                                                            class="bg-light border-bottom-0">조정 필요
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <!--빈소 용품 비용 e-->
+                                                    <!--음식 용품 비용 s-->
+                                                    <div>
+                                                        <div class="subtitle2 cl_info mt-40">음식 용품 비용</div>
+
+                                                        <div class="table-responsive rounded-2 border mt-3">
+                                                            <table class="table" id="round_table">
+                                                                <colgroup>
+                                                                    <col width="50%">
+                                                                    <col width="50%">
+                                                                </colgroup>
+                                                                <thead class="table-light">
+                                                                    <th class="round-lt text-center">
+                                                                        구분</th>
+                                                                    <th class="round-rt text-center">
+                                                                        금액</th>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="">음식 요금
+                                                                        </td>
+                                                                        <td class=""><span class="">700,000</span>
+                                                                            원<span class="ms-2">~</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2" class="bg-light">1인당 음식 비용
+                                                                            14,000원 기준</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="">일반정식 변경</td>
+                                                                        <td class=""><span class="">600,000</span>
+                                                                            원<span class="ms-2">~</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2"
+                                                                            class="bg-light border-bottom-0">1인당 음식 비용
+                                                                            12,000원 기준
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+
+
+
+                                                    </div>
+                                                    <!--음식 용품 비용 e-->
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!--세부내역 e-->
+
+
+
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <!--비용안내 e-->
+    </section>
+
+    <!--/견적서-->
+    <div class="px-4 pt-4">
+        <button type="submit" class="btn btn-outline-dark btn-lg w-100  rounded-2"
+            onclick="location.href='index.html'">목록으로 가기</button>
+    </div>
+</div>
+<!--content e-->
+
+<script>
+    const toastTrigger = document.getElementById('liveToastBtn')
+    const toastLiveExample = document.getElementById('liveToast')
+    if (toastTrigger) {
+        toastTrigger.addEventListener('click', () => {
+            const toast = new bootstrap.Toast(toastLiveExample)
+
+            toast.show()
+        })
+    }
+</script>

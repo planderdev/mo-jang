@@ -1,37 +1,322 @@
 <?
 include("include/head.php");
 ?>
- 
-        <!--Title Header s-->
-        <header
-            class="d-flex bg-white sticky-header align-content-center flex-wrap align-items-center justify-content-between  ">
-            <nav class="navbar">
-                <div class="container-fluid">
-                    <button type="button" class="btn btn-md" onclick="window.history.back()"><span
-                            class="material-symbols-outlined">chevron_left</span>
-                    </button>
-                    <div class="header_title">상담/예약 내역</div>
+
+<!--Title Header s-->
+<header
+    class="d-flex bg-white sticky-header align-content-center flex-wrap align-items-center justify-content-between  ">
+    <nav class="navbar">
+        <div class="container-fluid">
+            <button type="button" class="btn btn-md" onclick="window.history.back()"><span
+                    class="material-symbols-outlined">chevron_left</span>
+            </button>
+            <div class="header_title">상담/예약 내역</div>
+        </div>
+    </nav>
+</header>
+<!--Title Header e-->
+<!--content s-->
+<div class="container">
+
+    <div class="wrap-2">
+        <div class="d-flex gap-3 flex-column">
+            <!--A type-->
+            <div class="body2 cl_info">23.09.25 (월)</div>
+            <div class="card text-center d-flex flex-column gap-3 align-items-start cl_info border rounded-3 px-3 py-3">
+                <div class="d-flex w-100 justify-content-between align-items-center">
+                    <div class="subtitle3 text-primary-dark fw-bold">상담요청</div>
+                    <button type="button" class="btn btn-sm caption1 btn-link cl_info btn-right-arrow "
+                        onclick="location.href='order_detail.html'">
+                        상세내역 보기</button>
                 </div>
-            </nav>
-        </header>
-        <!--Title Header e-->
-        <!--content s-->
-        <div class="container"> 
-            <!--null-->
-            <diV class="vertical-center">
-                <div class="w-60 text-center mx-auto">
-                    <div><img src="img/3d_icon_3.png" class="w-80" style="filter:grayscale(); opacity: .4;"></div>
-                    <div class="subtitle1 mb-4">상담/예약 내역이 없습니다.</div>
-                    <button type="button" class="btn btn-lg w-100 btn-primary" onclick="location.href='index.html'">
-                        메인으로</button>
+                <div class="order_list">
+                    <div class="card ">
+                        <div class="position-relative w-40">
+                            <img src="https://www.jeju-jungangh.com/kor/_wpcomm/HomeType/basic/image/content/funeral_hall01.jpg"
+                                class="card-img-top" alt="장례식장">
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-content-center">
+                                <p class="card-text">제주 제주시</p>
+                            </div>
+                            <div class="d-flex flex-column text-start my-2">
+                                <h5 class="card-title cl_dark ">그랜드부민장례식장</h5>
+                                <div class="caption1 text-dark mt-2"><span>50명내외</span><span> / </span><span>고급형</span>
+                                </div>
+                            </div>
+                            <div class="alert alert-primary mt-2" role="alert">
+                                <span class="cl_primary_dark me-2">장례 예약 비용</span><span
+                                    class="cl_dark"><span>2,361,818</span>원</span>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
+
+                <button type="button" class="btn btn-lg w-100 btn-primary btn-right-arrow "
+                    onclick="location.href='#'" disabled>
+                    출동 요청</button>
             </div>
-            <!--null-->
+            <!--/A type-->
 
         </div>
-        <!--content e-->
 
-        <?
+        <!--null-->
+        <diV class="vertical-center d-none">
+            <div class="w-60 text-center mx-auto">
+                <div><img src="img/3d_icon_3.png" class="w-80" style="filter:grayscale(); opacity: .4;"></div>
+                <div class="subtitle1 mb-4">상담/예약 내역이 없습니다.</div>
+                <button type="button" class="btn btn-lg w-100 btn-primary" onclick="location.href='index.html'">
+                    메인으로</button>
+            </div>
+        </div>
+        <!--null-->
+    </div>
+
+    <hr>
+
+    <div class="wrap-2">
+        <div class="d-flex gap-3 flex-column">
+            <!--B type 견적완료-->
+            <div class="card text-center d-flex flex-column gap-3 align-items-start cl_info border rounded-3 px-3 py-3">
+                <div class="d-flex w-100 justify-content-between align-items-center">
+                    <div class="subtitle3 text-success fw-bold">견적완료</div>
+                    <button type="button" class="btn btn-sm caption1 btn-link cl_info btn-right-arrow "
+                        onclick="location.href='order_detail2.html'">
+                        상세내역 보기</button>
+                </div>
+                <div class="order_list">
+                    <div class="card ">
+                        <div class="position-relative w-40">
+                            <img src="https://www.jeju-jungangh.com/kor/_wpcomm/HomeType/basic/image/content/funeral_hall01.jpg"
+                                class="card-img-top" alt="장례식장">
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-content-center">
+                                <p class="card-text">제주 제주시</p>
+                            </div>
+                            <div class="d-flex flex-column text-start my-2">
+                                <h5 class="card-title cl_dark ">그랜드부민장례식장</h5>
+                                <div class="caption1 text-dark mt-2"><span>50명내외</span><span> / </span><span>고급형</span>
+                                </div>
+                            </div>
+                            <div class="alert alert-primary mt-2" role="alert">
+                                <span class="cl_primary_dark me-2">장례 예약 비용</span><span
+                                    class="cl_dark"><span>2,361,818</span>원</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button type="button" class="btn btn-lg w-100 btn-primary btn-right-arrow "
+                    onclick="location.href='#'">
+                    출동 요청</button>
+            </div>
+            <!--/B type 견적완료-->
+
+            <!--B type 출동 요청-->
+            <div class="card text-center d-flex flex-column gap-3 align-items-start cl_info border rounded-3 px-3 py-3">
+                <div class="d-flex w-100 justify-content-between align-items-center">
+                    <div class="subtitle3   text-info fw-bold">출동 요청</div>
+                    <button type="button" class="btn btn-sm caption1 btn-link cl_info btn-right-arrow "
+                        onclick="location.href='order_detail3.html'">
+                        상세내역 보기</button>
+                </div>
+                <div class="order_list">
+                    <div class="card ">
+                        <div class="position-relative w-40">
+                            <img src="https://www.jeju-jungangh.com/kor/_wpcomm/HomeType/basic/image/content/funeral_hall01.jpg"
+                                class="card-img-top" alt="장례식장">
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-content-center">
+                                <p class="card-text">제주 제주시</p>
+                            </div>
+                            <div class="d-flex flex-column text-start my-2">
+                                <h5 class="card-title cl_dark ">그랜드부민장례식장</h5>
+                                <div class="caption1 text-dark mt-2"><span>50명내외</span><span> / </span><span>고급형</span>
+                                </div>
+                            </div>
+                            <div class="alert alert-primary mt-2" role="alert">
+                                <span class="cl_primary_dark me-2">장례 예약 비용</span><span
+                                    class="cl_dark"><span>2,361,818</span>원</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button type="button" class="btn btn-lg w-100 btn-primary btn-right-arrow "
+                    onclick="location.href='payment.html'" disabled>
+                    결제하기</button>
+            </div>
+            <!--/B type 출동 요청-->
+
+            <!--B type 결제대기-->
+            <div class="card text-center d-flex flex-column gap-3 align-items-start cl_info border rounded-3 px-3 py-3">
+                <div class="d-flex w-100 justify-content-between align-items-center">
+                    <div class="subtitle3   text-danger fw-bold">결제대기</div>
+                    <button type="button" class="btn btn-sm caption1 btn-link cl_info btn-right-arrow "
+                        onclick="location.href='order_detail4.html'">
+                        상세내역 보기</button>
+                </div>
+                <div class="order_list">
+                    <div class="card ">
+                        <div class="position-relative w-40">
+                            <img src="https://www.jeju-jungangh.com/kor/_wpcomm/HomeType/basic/image/content/funeral_hall01.jpg"
+                                class="card-img-top" alt="장례식장">
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-content-center">
+                                <p class="card-text">제주 제주시</p>
+                            </div>
+                            <div class="d-flex flex-column text-start my-2">
+                                <h5 class="card-title cl_dark ">그랜드부민장례식장</h5>
+                                <div class="caption1 text-dark mt-2"><span>50명내외</span><span> / </span><span>고급형</span>
+                                </div>
+                            </div>
+                            <div class="alert alert-primary mt-2" role="alert">
+                                <span class="cl_primary_dark me-2">장례 예약 비용</span><span
+                                    class="cl_dark"><span>2,361,818</span>원</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button type="button" class="btn btn-lg w-100 btn-primary btn-right-arrow "
+                    onclick="location.href='payment.html'">
+                    결제하기</button>
+            </div>
+            <!--/B type 결제대기-->
+
+              <!--B type 입금대기-->
+              <div class="card text-center d-flex flex-column gap-3 align-items-start cl_info border rounded-3 px-3 py-3">
+                <div class="d-flex w-100 justify-content-between align-items-center">
+                    <div class="subtitle3   text-danger fw-bold">입금대기</div>
+                    <button type="button" class="btn btn-sm caption1 btn-link cl_info btn-right-arrow "
+                        onclick="location.href='order_wait.html'">
+                        상세내역 보기</button>
+                </div>
+                <div class="order_list">
+                    <div class="card ">
+                        <div class="position-relative w-40">
+                            <img src="https://www.jeju-jungangh.com/kor/_wpcomm/HomeType/basic/image/content/funeral_hall01.jpg"
+                                class="card-img-top" alt="장례식장">
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-content-center">
+                                <p class="card-text">제주 제주시</p>
+                            </div>
+                            <div class="d-flex flex-column text-start my-2">
+                                <h5 class="card-title cl_dark ">그랜드부민장례식장</h5>
+                                <div class="caption1 text-dark mt-2"><span>50명내외</span><span> / </span><span>고급형</span>
+                                </div>
+                            </div>
+                            <div class="alert alert-primary mt-2" role="alert">
+                                <span class="cl_primary_dark me-2">장례 예약 비용</span><span
+                                    class="cl_dark"><span>2,361,818</span>원</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button type="button" class="btn btn-lg w-100 btn-primary "
+                    onclick="location.href='payment.html'">
+                    {은행명} {입금계좌} [복사하기 기능]</button>
+            </div>
+            <!--/B type 입금대기-->
+
+
+            <!--B type 장례 중-->
+            <div class="card text-center d-flex flex-column gap-3 align-items-start cl_info border rounded-3 px-3 py-3">
+                <div class="d-flex w-100 justify-content-between align-items-center">
+                    <div class="subtitle3   text-dark fw-bold">장례 중</div>
+                    <button type="button" class="btn btn-sm caption1 btn-link cl_info btn-right-arrow "
+                        onclick="location.href='order_ing.html'">
+                        상세내역 보기</button>
+                </div>
+                <div class="order_list">
+                    <div class="card ">
+                        <div class="position-relative w-40">
+                            <img src="https://www.jeju-jungangh.com/kor/_wpcomm/HomeType/basic/image/content/funeral_hall01.jpg"
+                                class="card-img-top" alt="장례식장">
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-content-center">
+                                <p class="card-text">제주 제주시</p>
+                            </div>
+                            <div class="d-flex flex-column text-start my-2">
+                                <h5 class="card-title cl_dark ">그랜드부민장례식장</h5>
+                                <div class="caption1 text-dark mt-2"><span>50명내외</span><span> / </span><span>고급형</span>
+                                </div>
+                            </div>
+                            <div class="alert alert-primary mt-2" role="alert">
+                                <span class="cl_primary_dark me-2">장례 예약 비용</span><span
+                                    class="cl_dark"><span>2,361,818</span>원</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button type="button" class="btn btn-lg w-100 btn-primary btn-right-arrow "
+                    onclick="location.href='myreview_edit.html'">
+                    장례 완료</button>
+            </div>
+            <!--/B type 장례 중-->
+
+            <!--B type 장례완료-->
+            <div class="card text-center d-flex flex-column gap-3 align-items-start cl_info border rounded-3 px-3 py-3">
+                <div class="d-flex w-100 justify-content-between align-items-center">
+                    <div class="subtitle3 text-dark fw-bold">장례완료</div>
+                    <button type="button" class="btn btn-sm caption1 btn-link cl_info btn-right-arrow "
+                        onclick="location.href='order_end.html'">
+                        상세내역 보기</button>
+                </div>
+                <div class="order_list">
+                    <div class="card ">
+                        <div class="position-relative w-40">
+                            <img src="https://www.jeju-jungangh.com/kor/_wpcomm/HomeType/basic/image/content/funeral_hall01.jpg"
+                                class="card-img-top" alt="장례식장">
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-content-center">
+                                <p class="card-text">제주 제주시</p>
+                            </div>
+                            <div class="d-flex flex-column text-start my-2">
+                                <h5 class="card-title cl_dark ">그랜드부민장례식장</h5>
+                                <div class="caption1 text-dark mt-2"><span>50명내외</span><span> / </span><span>고급형</span>
+                                </div>
+                            </div>
+                            <div class="alert alert-primary mt-2" role="alert">
+                                <span class="cl_primary_dark me-2">장례 예약 비용</span><span
+                                    class="cl_dark"><span>2,361,818</span>원</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button type="button" class="btn btn-lg w-100 btn-primary btn-right-arrow "
+                    onclick="location.href='myreview_edit.html'">
+                    후기 쓰기</button>
+            </div>
+            <!--/B type 장례완료-->
+
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+<!--content e-->
+
+<?
         include("include/footer.php");
         ?>
- 

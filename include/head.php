@@ -21,37 +21,33 @@
     <!--Font-->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link rel="stylesheet" type="text/css"
+        <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+          <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" /> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--Slick-->
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
     <!--JS-->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/basic.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script> 
-    <!--Datepicker-->
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>  
+ 
      <script>
         $(function(){
           var includes1 = $('[data-include1="header"]');
-          var includes2 = $('[data-include2="lease_info"]');
-           jQuery.each(includes1, function(){
+            jQuery.each(includes1, function(){
              $(this).load('include/header.html');
           });
-          jQuery.each(includes2, function(){
-            $(this).load('include/lease_info.html');
-          });
-          
+            
         });
+
+        
      </script> 
-  <script>
-  $( function() {
-    $( "#datepicker" ).datepicker();
-  } );
-  </script>
+ 
     <title>모두의 장례</title>
 </head>
 <body> 
@@ -67,3 +63,4 @@
 </div>
 <!--wrap s-->
  <div id="wrap">
+ <div data-include1="header" id="header"></div>

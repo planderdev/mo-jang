@@ -10,14 +10,54 @@ include("include/head.php");
                     <button type="button" class="btn btn-md" onclick="window.history.back()"><span
                             class="material-symbols-outlined">chevron_left</span>
                     </button>
-                    <div class="header_title">내 정보 수정</div>
+                    <div class="header_title">내 정보</div>
                 </div>
             </nav>
         </header>
         <!--Title Header e-->
         <!--content s-->
         <div class="container">
-            <div class="d-flex justify-content-between py-3 align-items-center">
+            <div class="d-flex justify-content-between px-4 py-3 align-items-center">
+                <h2>이름 수정</h2>
+             </div>
+            <div class="wrap-2">
+                <form>
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label caption1">이름 <span class="cl_red body2"> *</span></label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="{카카오 설정이름}">
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label caption1">이메일 아이디 <span class="cl_red body2"> *</span></label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" value="" placeholder="plander@plander.io" aria-label="readonly" disabled>
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label caption1">핸드폰 번호 <span class="cl_red body2"> *</span></label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" value="" placeholder="01012345678" aria-label="readonly" disabled>
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label caption1">생년월일 <span class="cl_red body2"> *</span></label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" value="" placeholder="YYYY-MM-DD" aria-label="readonly" disabled>
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label caption1">성별 <span class="cl_red body2"> *</span></label>
+                        <div> <span>남성</span></div>
+                      </div>
+                      <div class="fixed_bottom">
+
+                        <button type="submit" class="btn btn-lg w-100 btn-primary">수정 완료</button>
+
+                      </div>
+                </form>
+            </div>
+
+
+        </div>
+
+
+
+        <div class="container d-none">
+            <div class="d-flex justify-content-between px-4 py-3 align-items-center">
                 <h2>회원정보수정</h2>
                 <button type="button" class="btn btn-sm cl_pink">탈퇴하기</button>
             </div>
@@ -48,6 +88,16 @@ include("include/head.php");
                                 <div class="caption1 cl_info">이메일을 변경하시려면 운영자에게 이메일을 보내주세요.</div>
                             </div>
                         </div>
+
+                        <div class="profile_item">
+                            <div class="title">핸드폰 번호<div class="cl_info body2"> * 필수항목</div>
+                            </div>
+                            <div class="txt">
+                                <input type="number" class="form-control" placeholder="핸드폰 번호" aria-label="핸드폰 번호"
+                                    aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+
 
                         <div class="profile_item">
                             <div class="title">별명<div class="cl_info body2"> * 필수항목</div>

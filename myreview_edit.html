@@ -17,21 +17,45 @@ include("include/head.php");
         </header>
         <!--Title Header e-->
         <!--content s-->
-        <div class="container px-3">
+        <div class="container px-4">
             <form>
                 <div class="shadow_box">
-                    <div class="review_list pb-0">
-                        <div class="card">
-                            <img src="https://www.jeju-jungangh.com/kor/_wpcomm/HomeType/basic/image/content/funeral_hall01.jpg"
-                                class="card-img-top" alt="...">
-                            <div class="card-body w-70">
-                                <span class="badge text-bg-light mb-2">대학병원</span>
-                                <h5 class="card-title">제주대학교병원 장례식장 제주대학교병원 장례식장</h5>
-                                <p>제주특별자치도 제주시 아란13길 15 아란13길 15</p>
+                     <!--B type-->
+        <div class="card text-center d-flex flex-column gap-3 align-items-start cl_info ">
+            <div class="order_list w-100 ">
+                <div class="card border-0 align-items-center">
+                    <div class="thum  ">
+                        <span class="badge bg-primary">대학병원</span>
+                        <img src="img/result_1.png" class="card-img-top" alt="장례식장">
+                    </div>
+                    <div class="card-body ps-1">
+                        <div class="d-flex justify-content-between align-content-center">
+                            <p class="card-text">제주 제주시</p>
+                        </div>
+                        <div class="d-flex flex-column text-start my-2">
+                            <h5 class="card-title cl_dark ">그랜드부민장례식장</h5>
+                            <div class="caption1 text-dark mt-2"><span>50명내외</span><span> / </span><span>고급형</span>
                             </div>
                         </div>
+
                     </div>
+                </div> 
+            </div>
+        </div>
+        <!--/B type-->
                 </div>
+
+                <div class="d-flex w-100 pt-5   flex-column">
+                    <div class="subtitle1">평점</div>
+                <div class="star-rating mx-auto d-flex gap-4 mt-4">
+                    <i class="fa fa-star" data-rating="1"></i>
+                    <i class="fa fa-star" data-rating="2"></i>
+                    <i class="fa fa-star" data-rating="3"></i>
+                    <i class="fa fa-star" data-rating="4"></i>
+                    <i class="fa fa-star" data-rating="5"></i>
+                  </div> 
+                </div>
+
                 <div class="review_item d-flex gap-3 flex-column pt-5">
                     <div class="subtitle1">특별히 좋았던 점을 칭찬해주세요.</div>
                     <div>
@@ -55,6 +79,10 @@ include("include/head.php");
                         <label class="btn btn-lg w-100 btn-outline-gray" for="review-check5">🚗 편한 교통 · 주차</label>
                     </div>
                 </div>
+
+                <textarea class="form-control my-4" aria-label="With textarea" placeholder="솔직한 이야기를 작성하여, 다른 이용 고객에게 도움을 주는 것은 어떨까요?"></textarea>
+
+
                 <div class="fixed_bottom bg_gradient_btn d-flex py-3 gap-3">
                     <button type="submit" class="btn btn-primary btn-lg rounded-2 w-100">작성완료</button>
                 </div>
@@ -62,6 +90,24 @@ include("include/head.php");
 
         </div>
         <!--content e-->
+
+        <script>
+            var $star_rating = $('.star-rating .fa-star');
+
+$star_rating.mouseover(function() {
+var rate = parseInt($(this).data('rating'));
+$('input.rating-value').val(rate);
+$star_rating.each(function() {
+if (rate >= parseInt($(this).data('rating'))) {
+return $(this).removeClass('checked').addClass('checked');
+} else {
+return $(this).removeClass('checked');
+}
+});
+});
+         </script>
+
+
         <?
         include("include/footer.php");
         ?>
