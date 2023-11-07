@@ -45,16 +45,39 @@ include("include/head.php");
                       </div>
                       <div class="fixed_bottom">
 
-                        <button type="submit" class="btn btn-lg w-100 btn-primary">수정 완료</button>
+                        <button type="submit" class="btn btn-full w-100  btn-primary">수정 완료</button>
 
                       </div>
                 </form>
+
+                <div class="mt-6">
+                    <a href="#" class="underline caption1" data-bs-toggle="modal"
+                    data-bs-target="#logoutmodal">로그아웃</a>
+                </div>
+                
             </div>
 
 
         </div>
 
-
+<!-- logout Modal -->
+<div class="modal fade" id="logoutmodal" tabindex="-1" aria-labelledby="logoutmodalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="logoutmodalLabel">로그아웃</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                로그아웃 하시겠습니까?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-gray" data-bs-dismiss="modal">취소</button>
+                <button type="button" class="btn btn-primary" onclick="location.href='index.html'">로그아웃</button>
+            </div>
+        </div>
+    </div>
+</div>
 
         <div class="container d-none">
             <div class="d-flex justify-content-between px-4 py-3 align-items-center">
@@ -154,7 +177,7 @@ include("include/head.php");
 
 
                     </div>
-                    <button type="submit" class="btn btn-lg w-100 btn-primary">회원 정보 수정</button>
+                    <button type="submit" class="btn btn-lg w-100  btn-primary">회원 정보 수정</button>
                 </form>
             </div>
 
