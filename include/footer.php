@@ -208,6 +208,13 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="info_box bg-white sd_l">
+                                <ul>
+                                    <li>해당 견적 서비스는 최대 7일동안 유효합니다.</li>
+                                    <li>장례식장 상황에 따라 견적이 상이 할 수 있습니다.</li>
+                                </ul>
+                            </div>
                         </div>
 
                 </section>
