@@ -2549,8 +2549,9 @@
                 </div>
                 <!--content e-->
 
-                <div class="fixed_bottom_full2 bg_gradient_btn d-flex py-3 gap-3">
-                    <button type="button" class="btn btn-primary btn-full w-100" onclick="location.href='write_request.html'">결제하기</button>
+                <div class="fixed_bottom bg-white d-flex py-3 gap-4 px-4">
+                <button type="button" class="btn btn-outline-black btn-lg flex-1" onclick="location.href='http://pf.kakao.com/_YmxdxbG/chat'">카톡상담</button>
+                    <button type="button" class="btn btn-primary btn-lg flex-1" onclick="location.href='tel:'">전화상담</button>
                 </div>
 
                 <!--payment Modal -->
